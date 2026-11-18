@@ -121,7 +121,7 @@ function App() {
                   </div>
                   <div className="statistics__data">
                     <div className="statistics__data--number">
-                      95%
+                      96%
                     </div>
                     <div className="statistics__data--title">
                       of Summarist members <b>establish better</b> habits.
