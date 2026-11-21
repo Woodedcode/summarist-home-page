@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png';
 
-function Navbar({onOpenMenu}) {
+function Navbar({onOpenAuth}) {
   return (
     <>
       <nav className="nav">
@@ -9,7 +9,7 @@ function Navbar({onOpenMenu}) {
             <img className="nav__img" src={logo} alt="Summarist Logo" />
           </figure>
           <ul className="nav__list--wrapper">
-            <li className="nav__list nav__list--login">Login</li>
+            <li className="nav__list nav__list--login" onClick={onOpenAuth}>Login</li>
             <li className="nav__list nav__list--mobile">About</li>
             <li className="nav__list nav__list--mobile">Contact</li>
             <li className="nav__list nav__list--mobile">Help</li>

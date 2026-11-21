@@ -497,6 +497,26 @@ button:disabled {
 
 .auth__modal {
   background-color: white;
+  width: 400px;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  position: relative;
+}
+
+.auth__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 @media (max-width: 768px) {

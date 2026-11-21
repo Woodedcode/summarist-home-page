@@ -15,7 +15,7 @@ function App() {
   return (
     <>
         <Navbar onOpenAuth={() => setIsAuthOpen(true)} />
-        {isAuthOpen && <AuthModal />}
+        {isAuthOpen && <AuthModal onClose={() => setIsAuthOpen(false)}/>}
           <Landing />
           <Features />
           <Reviews />
