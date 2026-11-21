@@ -493,6 +493,12 @@ button:disabled {
   font-weight: 500;
 }
 
+/* AUTH MODAL */
+
+.auth__modal {
+  background-color: white;
+}
+
 @media (max-width: 768px) {
   .landing__content {
     display: flex;

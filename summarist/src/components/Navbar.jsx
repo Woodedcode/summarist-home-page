@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png';
 
-function Navbar() {
+function Navbar({onOpenMenu}) {
   return (
     <>
       <nav className="nav">
