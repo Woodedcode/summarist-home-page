@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { auth } from "../firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 function AuthModal({ onClose }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     if (password.length < 6) {
@@ -13,7 +18,18 @@ function AuthModal({ onClose }) {
       return;
     }
 
-    console.log(email);
+    try {
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+
+      onClose();
+    } catch (error) {
+      console.error(error);
+      alert("Authentication failed. Please try again.");
+    }
   }
 
   return (
